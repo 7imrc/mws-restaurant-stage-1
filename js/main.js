@@ -176,3 +176,20 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+/**
+ * Add a service worker for offline access.
+ */
+
+ if('serviceWorker' in navigator) {
+   navigator.serviceWorker
+    .register('/sw.js')
+    .then((registration) => {
+      //registration successful
+      console.log('Service worker registered', registration);
+    })
+    .catch((error) => {
+      //registration failed
+      console.log('Service worker failed to register: ', error);
+    })
+ }
