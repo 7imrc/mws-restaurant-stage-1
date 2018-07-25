@@ -1,4 +1,4 @@
-let cacheName = 'v1';
+let cacheName = 'v2';
 
 let cacheFiles = [
   './',
@@ -33,6 +33,17 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   console.log('ServiceWorker activated');
+
+  event.waitUntil(
+    caches.keys().then( (cacheNames) => {
+      return Promise.all(cacheNames.map( (thisCacheName) => {
+        if (thisCacheName !== cacheName) {
+          console.log('Removing cache files from ', thisCacheName);
+          return caches.delete(thisCacheName);
+        }
+      }))
+    })
+  )
 })
 
 self.addEventListener('fetch', (event) => {
