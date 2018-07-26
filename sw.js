@@ -1,7 +1,8 @@
-let cacheName = 'v2';
+var cacheName = 'v1';
 
 let cacheFiles = [
   './',
+  './index.html',
   './restaurant.html',
   './css/styles.css',
   './data/restaurants.json',
@@ -46,6 +47,16 @@ self.addEventListener('activate', (event) => {
   )
 })
 
+
 self.addEventListener('fetch', (event) => {
   console.log('ServiceWorker fetching', event.request.url);
+
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request).then( (response) => {
+        return response || fetch (event.request);
+      })
+    );
+  });
+
 })
