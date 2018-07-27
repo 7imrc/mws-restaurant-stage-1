@@ -1,4 +1,4 @@
-var cacheName = 'v1';
+let cacheName = 'v1';
 
 let cacheFiles = [
   './',
@@ -21,17 +21,25 @@ let cacheFiles = [
   './js/restaurant_info.js'
 ];
 
+// Installation of the service worker (sw)
 self.addEventListener('install', (event) => {
+  //Perform sw install steps
   console.log('ServiceWorker installed');
 
   event.waitUntil(
-    caches.open(cacheName).then( (cache) => {
+    caches.open(cacheName)
+      .then( (cache) => {
       console.log('sw caching files');
       return cache.addAll(cacheFiles);
     })
-  )
-})
+  );
+});
 
+/**
+ * Determine if the sw has been updated.
+ * If so, remove the old cache name and update with
+ * new one from the new sw.
+ */
 self.addEventListener('activate', (event) => {
   console.log('ServiceWorker activated');
 
@@ -47,16 +55,18 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-
+/**
+ * Determines if any of the fetch events is in the cache,
+ * if it is return the cached value.  If not held in cache,
+ * make a network request for it.
+ */
 self.addEventListener('fetch', (event) => {
   console.log('ServiceWorker fetching', event.request.url);
 
-  self.addEventListener('fetch', (event) => {
-    event.respondWith(
-      caches.match(event.request).then( (response) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then( (response) => {
         return response || fetch (event.request);
       })
-    );
-  });
-
-})
+  );
+});
