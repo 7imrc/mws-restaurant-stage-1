@@ -153,12 +153,13 @@ nav h1 a {
   width: 270px;
 }
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
+  background-color: #fff;
   display: block;
   margin: 0;
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
+  padding-top: 25px;
 }
 #restaurants-list li h1 {
   color: #803f0e;
