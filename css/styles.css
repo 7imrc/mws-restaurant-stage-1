@@ -211,7 +211,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 45%;
 }
 #restaurant-name {
   color: #f18200;
@@ -246,7 +246,11 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  width: 50%;
+  width: 45%;
+}
+#restaurant-container {
+	display: flex;
+	flex-direction: column;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -264,7 +268,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -278,4 +282,76 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Responsive Details ====================== */
+
+@media screen and (max-width: 444px) {
+	.filter-options {
+		height: 140px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.inside {
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+	}
+	header nav {
+		order: 0;
+		padding-top: 5px;
+		height: 40px;
+	}
+	header #breadcrumb {
+		order: 1;
+		width: 100vw;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+	.inside #map-container {
+		order: 2;
+		position: relative;
+		width: 100vw;
+		height: 400px;
+	}
+	.inside #restaurant-container {
+		order: 3;
+		position: relative;
+		width: 100vw;
+		text-align: center;
+		padding-top: 100px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.inside #reviews-container {
+		order: 4;
+		width: 100vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#reviews-container h2 {
+		text-align:center;
+	}
+	#reviews-list {
+		width: 100vw;
+		box-sizing: border-box;
+		margin-left: 20px;
+	}
+	#restaurant-img,
+	#restaurant-cuisine {
+		width: 100vw;
+	}
+	.inside #footer {
+		width: 100vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	header,
+	header nav {
+		width: 100vw;
+	}
 }
