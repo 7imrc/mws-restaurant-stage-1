@@ -286,12 +286,6 @@ nav h1 a {
 
 /* ====================== Responsive Details ====================== */
 
-@media screen and (max-width: 444px) {
-	.filter-options {
-		height: 140px;
-	}
-}
-
 @media screen and (max-width: 750px) {
 	.inside {
 		display: flex;
@@ -306,10 +300,7 @@ nav h1 a {
 	header #breadcrumb {
 		order: 1;
 		width: 100vw;
-		padding-left: 0;
-		padding-right: 0;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding: 5px 0;
 		text-align: center;
 	}
 	.inside #map-container {
@@ -353,5 +344,24 @@ nav h1 a {
 	header,
 	header nav {
 		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#reviews-list li {
+		width: 75vw;
+	}
+}
+
+@media screen and (max-width: 444px) {
+	.filter-options {
+		height: 140px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav h1 a {
+		font-size: 10px;
+		letter-spacing: 5px;
 	}
 }
