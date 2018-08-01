@@ -14,20 +14,18 @@ In addition, a service worker was added to create an offline experience for the 
 
 ### Prerequisites
 
-1. Python can be used to act as the HTTP server.  If you do not have it installed already, then visit their website [website](https://www.python.org/) to download and install the software.
+1. Python can be used to act as the HTTP server.  If you do not have it installed already, then visit their [website](https://www.python.org/) to download and install the software.
 
-2. Once the review is completed, you will need to obtain your own Google maps API key from [website](https://developers.google.com/maps/documentation/javascript/get-api-key).  Once you have done this, replace the text `YOUR_GOOGLE_MAPS_API_KEY` in `index.html` and `restaurant.html` with your own key.
+2. Once the review is completed, you will need to obtain your own Google maps API key from [here](https://developers.google.com/maps/documentation/javascript/get-api-key).  Once you have done this, replace the text `YOUR_GOOGLE_MAPS_API_KEY` in `index.html` and `restaurant.html` with your own key.
 
 ### Installing
 
 1.  In a terminal, navigate to the project's folder.
 
-2.  Then run the HTTP server.  For example using Python 3.6, you can use the command: `py -3.6 -m http.server 8000`.
-
-If you are unsure of which version of Python you have installed already, check with the command: `python -v`.
+2.  Then run the HTTP server.  For example using Python 3.6, you can use the command: `py -3.6 -m http.server 8000`. If you are unsure of which version of Python you have installed already, check with the command: `python -v`.
 
 3. In a browser, enter `http://localhost:8000`, to load the Restaurant Review app's homepage.
 
 ### Acknowledgements
 
-The Udacity starter files for this project can be found at `https://github.com/udacity/mws-restaurant-stage-1`.  This project used the `google-maps branch` of the starter code.
+The Udacity starter files for this project can be found at `https://github.com/udacity/mws-restaurant-stage-1`.  This project used the `google-maps` branch of the starter code.
