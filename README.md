@@ -1,7 +1,5 @@
 # Restaurant Reviews App
 
-## Project Overview: Stage 1
-=======
 For this Udacity project, I had to take a static webpage and convert the design to be responsive on different sized displays and accessible for screen reader use.
 
 In addition, a service worker was added to create an offline experience for the users.
