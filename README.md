@@ -16,7 +16,7 @@ In addition, a service worker was added to create an offline experience for the 
 
 1. Python can be used to act as the HTTP server.  If you do not have it installed already, then visit their website [website](https://www.python.org/) to download and install the software.
 
-2. Once the review is completed, you will need to obtain your own Google maps API key from [website](https://developers.google.com/maps/documentation/javascript/get-api-key).
+2. Once the review is completed, you will need to obtain your own Google maps API key from [website](https://developers.google.com/maps/documentation/javascript/get-api-key).  Once you have done this, replace the text `YOUR_GOOGLE_MAPS_API_KEY` in `index.html` and `restaurant.html` with your own key.
 
 ### Installing
 
