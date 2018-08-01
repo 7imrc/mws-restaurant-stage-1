@@ -28,4 +28,4 @@ In addition, a service worker was added to create an offline experience for the 
 
 ### Acknowledgements
 
-The Udacity starter files for this project can be found at `https://github.com/udacity/mws-restaurant-stage-1`.  This project used the `google-maps` branch of the starter code.
+The Udacity starter files for this project can be found at their [Github page](https://github.com/udacity/mws-restaurant-stage-1).  This project used the `google-maps` branch of the starter code.
